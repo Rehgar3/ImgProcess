@@ -11,11 +11,10 @@ from skimage.metrics import structural_similarity as ssim_loss
 import argparse
 
 parser = argparse.ArgumentParser(description='PSNR SSIM script', add_help=False)
-parser.add_argument('--input_images_path', default='/media/omnisky/86f47b1d-de74-4df1-bec5-c0b2ea4961d5/wcy/SNR-Aware-Low-Light-Enhance-main/results/LOLv2_synthetic_model/images/GT')
-parser.add_argument('--image2smiles2image_save_path', default='/media/omnisky/86f47b1d-de74-4df1-bec5-c0b2ea4961d5/wcy/SNR-Aware-Low-Light-Enhance-main/results/LOLv2_synthetic_model/images/output')
+parser.add_argument('--input_images_path', default='./images/GT')
+parser.add_argument('--image2smiles2image_save_path', default='./images/output')
 parser.add_argument('-v', '--version', type=str, default='0.1')
 args = parser.parse_args()
-
 
 def is_png_file(filename):
     return any(filename.endswith(extension) for extension in [".jpg", ".png", ".jpeg"])
